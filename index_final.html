@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cetina Padel Masters — liga 2026</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B3B3A'/%3E%3Cpath d='M50 14c19 0 32 14 32 32 0 17-13 28-25 30l-3 10h-8l-3-10C31 74 18 63 18 46c0-18 13-32 32-32Z' fill='none' stroke='%23D7E14B' stroke-width='7' stroke-linejoin='round'/%3E%3C/svg%3E">
+<meta name="description" content="Raspored, ljestvica i pravila padel lige Cetina Padel Masters 2026.">
+<meta name="theme-color" content="#0B3B3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --court:#0B3B3A;
+  --turf:#1E7F63;
+  --ball:#D7E14B;
+  --bg:#F1F4F1;
+  --card:#FFFFFF;
+  --line:#D6DFDA;
+  --text:#12211F;
+  --muted:#5B706B;
+  --row:#FFFFFF;
+  --row-alt:#F7F9F7;
+  --shadow:0 1px 0 rgba(11,59,58,.06);
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --court:#08302F;
+    --turf:#3FA37F;
+    --ball:#D7E14B;
+    --bg:#0C1716;
+    --card:#132321;
+    --line:#22403C;
+    --text:#E7EFEC;
+    --muted:#93A8A2;
+    --row:#132321;
+    --row-alt:#162926;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --court:#08302F;--turf:#3FA37F;--ball:#D7E14B;--bg:#0C1716;--card:#132321;
+  --line:#22403C;--text:#E7EFEC;--muted:#93A8A2;--row:#132321;--row-alt:#162926;--shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:"Karla",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:18px;line-height:1.5;font-variant-numeric:tabular-nums;
+}
+h1,h2,h3{font-family:"Bricolage Grotesque","Karla",Georgia,sans-serif;margin:0;letter-spacing:-.02em;line-height:1.1}
+.wrap{max-width:820px;margin:0 auto;padding:0 16px}
+
+/* ---------- header + hero ---------- */
+header{background:var(--court);color:#EAF3EF;padding:22px 0 26px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,var(--ball) 0 33%,var(--turf) 33% 66%,#EAF3EF 66% 100%)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{width:34px;height:34px;flex:none}
+.brand h1{font-size:24px;font-weight:800;color:#fff}
+.brand p{margin:2px 0 0;font-size:15px;color:#9FC4B8}
+.hero{margin-top:20px;background:rgba(255,255,255,.06);border:1px solid rgba(215,225,74,.35);border-radius:14px;padding:16px}
+.hero .label{font-size:14px;color:var(--ball);font-weight:700;letter-spacing:.04em}
+.hero .teams{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(22px,5.4vw,30px);font-weight:700;color:#fff;margin:6px 0 2px}
+.hero .players{font-size:16px;color:#BFD8CF}
+.hero .when{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pill{background:var(--ball);color:#0B3B3A;font-weight:700;font-size:15px;padding:4px 10px;border-radius:999px}
+.pill.ghost{background:transparent;color:#BFD8CF;border:1px solid rgba(191,216,207,.4);font-weight:500}
+
+/* ---------- controls ---------- */
+.controls{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:18px 0;box-shadow:var(--shadow)}
+.controls label{display:block;font-size:15px;color:var(--muted);margin-bottom:6px}
+select{
+  width:100%;padding:10px 12px;font:inherit;font-size:17px;color:var(--text);
+  background:var(--bg);border:1px solid var(--line);border-radius:10px;
+}
+.datastatus{margin:12px 0 0;font-size:14px;color:var(--muted)}
+.datastatus.warn{color:#B4531F;font-weight:700}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .datastatus.warn{color:#F0A06A}}
+:root[data-theme="dark"] .datastatus.warn{color:#F0A06A}
+.check{display:flex;align-items:center;gap:9px;margin-top:12px;font-size:17px;cursor:pointer}
+.check input{width:18px;height:18px;accent-color:var(--turf)}
+
+/* ---------- sections ---------- */
+section{margin:30px 0}
+section h2{font-size:21px;font-weight:700;display:flex;align-items:baseline;gap:10px}
+section h2 span{font-family:"Karla",sans-serif;font-size:15px;font-weight:500;color:var(--muted);letter-spacing:0}
+.week{margin-top:18px}
+.week-head{font-size:15px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:6px;margin-bottom:8px}
+.match{
+  display:grid;grid-template-columns:58px 1fr auto;gap:12px;align-items:center;
+  background:var(--row);border:1px solid var(--line);border-left:4px solid transparent;
+  border-radius:11px;padding:11px 13px;margin-bottom:7px;
+}
+.match.mine{border-left-color:var(--ball);background:var(--row-alt)}
+.match.done{opacity:.62}
+.date{text-align:center;line-height:1.15}
+.date b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:19px;font-weight:700}
+.date i{font-style:normal;font-size:13px;color:var(--muted)}
+.vs{font-size:17px;font-weight:700}
+.vs em{font-style:normal;color:var(--muted);font-weight:500;padding:0 4px}
+.names{font-size:15px;color:var(--muted);margin-top:2px}
+.time{font-size:16px;font-weight:700;color:var(--turf);white-space:nowrap}
+.score{font-size:19px;font-weight:700;color:var(--text);white-space:nowrap;letter-spacing:-.01em}
+
+/* ---------- table ---------- */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:480px;font-size:16px}
+th,td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line)}
+th{background:var(--court);color:#EAF3EF;font-weight:700;font-size:14px;position:sticky;top:0}
+th:first-child,td:first-child{text-align:left}
+th:nth-child(2),td:nth-child(2){text-align:left}
+tbody tr:last-child td{border-bottom:none}
+tbody tr.mine{background:var(--row-alt)}
+tbody tr.mine td:first-child{box-shadow:inset 3px 0 0 var(--ball)}
+td.pts{font-weight:700}
+.rank{color:var(--muted);width:28px}
+.empty{padding:16px;color:var(--muted);font-size:16px}
+
+/* ---------- pairs + rules ---------- */
+.pairs{display:grid;gap:7px;grid-template-columns:1fr}
+@media(min-width:600px){.pairs{grid-template-columns:1fr 1fr}}
+.pair{display:flex;gap:11px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px 13px}
+.pair b{font-family:"Bricolage Grotesque",sans-serif;font-size:17px;color:var(--turf);min-width:44px}
+.pair.mine{border-color:var(--ball)}
+.rules{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 18px}
+.rules dt{font-weight:700;font-size:17px;margin-top:14px}
+.rules dd{margin:4px 0 14px;font-size:16.5px;color:var(--muted);max-width:66ch}
+footer{color:var(--muted);font-size:15px;text-align:center;padding:26px 0 34px;border-top:1px solid var(--line);margin-top:34px}
+:focus-visible{outline:2px solid var(--turf);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <g fill="none" stroke="#D7E14B" stroke-width="6">
+          <path d="M50 6c22 0 38 17 38 38 0 20-15 33-30 35l-3 12H45l-3-12C27 77 12 64 12 44 12 23 28 6 50 6Z" stroke-linejoin="round"/>
+          <path d="M45 91h10" stroke-linecap="round"/>
+        </g>
+        <g fill="#1E7F63">
+          <circle cx="38" cy="34" r="4"/><circle cx="50" cy="34" r="4"/><circle cx="62" cy="34" r="4"/>
+          <circle cx="38" cy="48" r="4"/><circle cx="50" cy="48" r="4"/><circle cx="62" cy="48" r="4"/>
+          <circle cx="44" cy="62" r="4"/><circle cx="56" cy="62" r="4"/>
+        </g>
+      </svg>
+      <div>
+        <h1>Cetina Padel Masters</h1>
+        <p>Liga 2026 · 9 parova · 36 mečeva</p>
+      </div>
+    </div>
+    <div class="hero" id="hero"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="controls">
+    <label for="pairSel">Tvoja ekipa</label>
+    <select id="pairSel"><option value="0">Nisam odabrao/la ekipu</option></select>
+    <label class="check"><input type="checkbox" id="onlyMine"> Prikaži samo moje mečeve</label>
+  
+    <p class="datastatus" id="dataStatus"></p>
+  </div>
+
+  <section>
+    <h2>Raspored <span>termin je 20:00, ako nije drugačije upisano</span></h2>
+    <div id="schedule"></div>
+  </section>
+
+  <section>
+    <h2>Ljestvica <span>2 boda za pobjedu</span></h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th class="rank"></th><th>Ekipa</th><th>Odigrano</th><th>Pobjede</th><th>Setovi</th><th>Gemovi</th><th>Bodovi</th></tr></thead>
+        <tbody id="standings"></tbody>
+      </table>
+    </div>
+    <p class="empty" id="standingsNote"></p>
+  </section>
+
+  <section>
+    <h2>Parovi</h2>
+    <div class="pairs" id="pairs"></div>
+  </section>
+
+  <section>
+    <h2>Pravila</h2>
+    <dl class="rules">
+      <dt>Odgode</dt>
+      <dd>Par koji traži odgodu javlja se u grupi Padel Naturalis najmanje 24 sata prije meča i izravno kontaktira protivnike. Novi termin potvrđuje voditelj lige. Termin u 18:00 služi za nadoknade — meč premješten u 18:00 ne igra se ponovno isti dan u 20:00.</dd>
+      <dt>Bodovanje</dt>
+      <dd>Pobjeda nosi dva boda. Kod jednakog broja bodova prvo se gleda razlika setova, zatim razlika gemova.</dd>
+      <dt>Meč</dt>
+      <dd>Set do 6 gemova uz dva razlike, na 6:6 tie-break do 7. Meč se igra na tri dobivena seta.</dd>
+      <dt>Zlatni poen</dt>
+      <dd>Prvi 40:40 igra se kao izjednačenje. Na drugo izjednačenje igra se jedan odlučujući poen, a par koji prima servis bira stranu prijema.</dd>
+    </dl>
+  </section>
+</main>
+
+<footer class="wrap">Cetina Padel Masters · liga 2026</footer>
+
+<script id="fallbackCsv" type="text/plain">Tjedan,Par A,Igrači A,Par B,Igrači B,Izvorni datum,Izvorni dan,Izvorno vrijeme,Novi datum,Novo vrijeme,Datum igranja,Dan igranja,Vrijeme igranja,Napomena,Rezultati
+1,2,Josip M. / Ivan K.,3,Tin M. / .....,15.09.2026,utorak,20:00,,,15.09.2026,utorak,20:00,,
+1,1,Fran R. / Dorijan,6,Ivor G. / Luka P.,16.09.2026,srijeda,20:00,,,16.09.2026,srijeda,20:00,,
+1,4,Hrvoje G. / Jurica K.,7,Hrvoje M. / Sven Š.,17.09.2026,četvrtak,20:00,,,17.09.2026,četvrtak,20:00,,6:1 6:4 6:2
+1,2,Josip M. / Ivan K.,5,Pavo R. / Kristijan K.,18.09.2026,petak,20:00,,,18.09.2026,petak,20:00,,3:6 2:6
+2,5,Pavo R. / Kristijan K.,9,Mislav/Dominik,21.09.2026,ponedjeljak,20:00,,,21.09.2026,ponedjeljak,20:00,,
+2,3,Tin M. / .....,4,Hrvoje G. / Jurica K.,22.09.2026,utorak,20:00,,,22.09.2026,utorak,20:00,,
+2,2,Josip M. / Ivan K.,6,Ivor G. / Luka P.,23.09.2026,srijeda,20:00,,,23.09.2026,srijeda,20:00,,
+2,7,Hrvoje M. / Sven Š.,9,Mislav/Dominik,24.09.2026,četvrtak,20:00,,,24.09.2026,četvrtak,20:00,,
+2,1,Fran R. / Dorijan,5,Pavo R. / Kristijan K.,25.09.2026,petak,20:00,,,25.09.2026,petak,20:00,,
+3,1,Fran R. / Dorijan,2,Josip M. / Ivan K.,28.09.2026,ponedjeljak,20:00,,,28.09.2026,ponedjeljak,20:00,,
+3,4,Hrvoje G. / Jurica K.,5,Pavo R. / Kristijan K.,29.09.2026,utorak,20:00,,,29.09.2026,utorak,20:00,,
+3,3,Tin M. / .....,6,Ivor G. / Luka P.,30.09.2026,srijeda,20:00,,,30.09.2026,srijeda,20:00,,
+3,2,Josip M. / Ivan K.,7,Hrvoje M. / Sven Š.,01.10.2026,četvrtak,20:00,,,01.10.2026,četvrtak,20:00,,
+3,4,Hrvoje G. / Jurica K.,9,Mislav/Dominik,02.10.2026,petak,20:00,,,02.10.2026,petak,20:00,,
+4,8,Sven M. / Filip Š.,9,Mislav/Dominik,05.10.2026,ponedjeljak,20:00,,,05.10.2026,ponedjeljak,20:00,,
+4,1,Fran R. / Dorijan,3,Tin M. / .....,06.10.2026,utorak,20:00,,,06.10.2026,utorak,20:00,,
+4,6,Ivor G. / Luka P.,7,Hrvoje M. / Sven Š.,07.10.2026,srijeda,20:00,,,07.10.2026,srijeda,20:00,,
+4,5,Pavo R. / Kristijan K.,8,Sven M. / Filip Š.,08.10.2026,četvrtak,20:00,,,08.10.2026,četvrtak,20:00,,
+4,2,Josip M. / Ivan K.,4,Hrvoje G. / Jurica K.,09.10.2026,petak,20:00,,,09.10.2026,petak,20:00,,
+5,3,Tin M. / .....,9,Mislav/Dominik,12.10.2026,ponedjeljak,20:00,,,12.10.2026,ponedjeljak,20:00,,
+5,2,Josip M. / Ivan K.,8,Sven M. / Filip Š.,13.10.2026,utorak,20:00,,,13.10.2026,utorak,20:00,,
+5,1,Fran R. / Dorijan,7,Hrvoje M. / Sven Š.,14.10.2026,srijeda,20:00,,,14.10.2026,srijeda,20:00,,
+5,6,Ivor G. / Luka P.,9,Mislav/Dominik,15.10.2026,četvrtak,20:00,,,15.10.2026,četvrtak,20:00,,
+5,3,Tin M. / .....,5,Pavo R. / Kristijan K.,16.10.2026,petak,20:00,,,16.10.2026,petak,20:00,,
+6,7,Hrvoje M. / Sven Š.,8,Sven M. / Filip Š.,19.10.2026,ponedjeljak,20:00,,,19.10.2026,ponedjeljak,20:00,,
+6,2,Josip M. / Ivan K.,9,Mislav/Dominik,20.10.2026,utorak,20:00,,,20.10.2026,utorak,20:00,,
+6,4,Hrvoje G. / Jurica K.,6,Ivor G. / Luka P.,21.10.2026,srijeda,20:00,,,21.10.2026,srijeda,20:00,,
+6,5,Pavo R. / Kristijan K.,6,Ivor G. / Luka P.,22.10.2026,četvrtak,20:00,,,22.10.2026,četvrtak,20:00,,
+6,1,Fran R. / Dorijan,8,Sven M. / Filip Š.,23.10.2026,petak,20:00,,,23.10.2026,petak,20:00,,
+7,3,Tin M. / .....,8,Sven M. / Filip Š.,26.10.2026,ponedjeljak,20:00,,,26.10.2026,ponedjeljak,20:00,,
+7,1,Fran R. / Dorijan,9,Mislav/Dominik,27.10.2026,utorak,20:00,,,16.09.2026,srijeda,20:00,,2:6 2:6
+7,5,Pavo R. / Kristijan K.,7,Hrvoje M. / Sven Š.,28.10.2026,srijeda,20:00,,,28.10.2026,srijeda,20:00,,
+7,6,Ivor G. / Luka P.,8,Sven M. / Filip Š.,29.10.2026,četvrtak,20:00,,,29.10.2026,četvrtak,20:00,,
+7,1,Fran R. / Dorijan,4,Hrvoje G. / Jurica K.,30.10.2026,petak,20:00,,,30.10.2026,petak,20:00,,
+8,3,Tin M. / .....,7,Hrvoje M. / Sven Š.,02.11.2026,ponedjeljak,20:00,,,02.11.2026,ponedjeljak,20:00,,
+8,4,Hrvoje G. / Jurica K.,8,Sven M. / Filip Š.,03.11.2026,utorak,20:00,,,03.11.2026,utorak,20:00,,
+</script>
+
+<script>
+(function(){
+"use strict";
+
+/* Izvor podataka: Google tablica objavljena preko File → Share → Publish to web (list Raspored, format CSV).
+   Sve se upisuje u tablicu — ova datoteka se više ne mijenja. */
+var CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTWWBAlUKbuC4RmkvUUjw1K1Wvyxuk3gab5m73HyNtFlw9tJljTr7Sm3PIFD_chTXGJFXgOHiRCzZ1C/pub?gid=10446674&single=true&output=csv";
+
+var DAYS = ["ned","pon","uto","sri","čet","pet","sub"];
+var DAYS_LONG = ["nedjelja","ponedjeljak","utorak","srijeda","četvrtak","petak","subota"];
+var KEY = "cpm_pair";
+
+var MATCHES = [], PAIRS = [], PM = {}, mine = 0;
+try{ mine = parseInt(localStorage.getItem(KEY)||"0",10) || 0; }catch(e){}
+
+/* ---------- pomoćne ---------- */
+function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+function d(iso){ return new Date(iso + "T00:00:00"); }
+function today(){ var t=new Date(); return t.getFullYear()+"-"+String(t.getMonth()+1).padStart(2,"0")+"-"+String(t.getDate()).padStart(2,"0"); }
+function toISO(s){
+  var m = String(s||"").trim().match(/^(\d{1,2})[.\/-](\d{1,2})[.\/-](\d{4})/);
+  if(m) return m[3]+"-"+String(m[2]).padStart(2,"0")+"-"+String(m[1]).padStart(2,"0");
+  m = String(s||"").trim().match(/^(\d{4})-(\d{2})-(\d{2})/);
+  return m ? m[0] : "";
+}
+function cleanTime(s){
+  var m = String(s||"").trim().match(/^(\d{1,2}):(\d{2})/);
+  return m ? String(m[1]).padStart(2,"0")+":"+m[2] : "";
+}
+function parseSets(s){
+  return String(s||"").split(/[\s,;]+/).map(function(tok){
+    var m = tok.match(/^(\d{1,2})[:\-](\d{1,2})$/);
+    return m ? [parseInt(m[1],10), parseInt(m[2],10)] : null;
+  }).filter(Boolean);
+}
+
+/* ---------- CSV ---------- */
+function parseCSV(text){
+  var rows=[], row=[], cell="", q=false, i, c;
+  text = text.replace(/^\uFEFF/,"").replace(/\r\n?/g,"\n");
+  for(i=0;i<text.length;i++){
+    c = text[i];
+    if(q){
+      if(c === '"'){ if(text[i+1] === '"'){ cell+='"'; i++; } else q=false; }
+      else cell += c;
+    } else if(c === '"'){ q = true; }
+    else if(c === ","){ row.push(cell); cell=""; }
+    else if(c === "\n"){ row.push(cell); rows.push(row); row=[]; cell=""; }
+    else cell += c;
+  }
+  if(cell.length || row.length){ row.push(cell); rows.push(row); }
+  return rows;
+}
+
+function buildMatches(text){
+  var rows = parseCSV(text), head = -1, i;
+  for(i=0;i<rows.length;i++){
+    if(rows[i].some(function(c){ return c.trim().toLowerCase()==="tjedan"; })){ head=i; break; }
+  }
+  if(head < 0) throw new Error("nema zaglavlja");
+  var idx = {};
+  rows[head].forEach(function(name,n){ idx[name.trim().toLowerCase()] = n; });
+  function col(r,name){ var n = idx[name]; return n==null ? "" : String(r[n]==null?"":r[n]).trim(); }
+
+  var out = [];
+  rows.slice(head+1).forEach(function(r){
+    var a = parseInt(col(r,"par a"),10), b = parseInt(col(r,"par b"),10);
+    var orig = toISO(col(r,"izvorni datum"));
+    if(!a || !b || !orig) return;
+    var date = toISO(col(r,"datum igranja")) || toISO(col(r,"novi datum")) || orig;
+    out.push({
+      week: parseInt(col(r,"tjedan"),10) || 0,
+      a:a, b:b,
+      na: col(r,"igrači a") || ("Par "+a),
+      nb: col(r,"igrači b") || ("Par "+b),
+      orig: orig,
+      date: date,
+      time: cleanTime(col(r,"vrijeme igranja")) || cleanTime(col(r,"novo vrijeme")) || cleanTime(col(r,"izvorno vrijeme")) || "20:00",
+      note: col(r,"napomena"),
+      sets: parseSets(col(r,"rezultati"))
+    });
+  });
+  if(!out.length) throw new Error("nema mečeva");
+  out.sort(function(x,y){ return (x.week-y.week) || (x.date < y.date ? -1 : x.date > y.date ? 1 : 0); });
+  return out;
+}
+
+function setData(matches){
+  MATCHES = matches;
+  var seen = {};
+  PAIRS = [];
+  MATCHES.forEach(function(m){
+    if(!seen[m.a]){ seen[m.a]=1; PAIRS.push({id:m.a, names:m.na}); }
+    if(!seen[m.b]){ seen[m.b]=1; PAIRS.push({id:m.b, names:m.nb}); }
+  });
+  PAIRS.sort(function(x,y){ return x.id-y.id; });
+  PM = {}; PAIRS.forEach(function(p){ PM[p.id]=p; });
+  MATCHES.forEach(function(m){ m.na = PM[m.a].names; m.nb = PM[m.b].names; });
+}
+
+/* ---------- ljestvica ---------- */
+function table(){
+  var t = {};
+  PAIRS.forEach(function(p){ t[p.id]={id:p.id,pl:0,w:0,sw:0,sl:0,gw:0,gl:0,pts:0}; });
+  MATCHES.forEach(function(m){
+    if(!m.sets.length) return;
+    var A=t[m.a], B=t[m.b], sa=0, sb=0, ga=0, gb=0;
+    m.sets.forEach(function(s){ ga+=s[0]; gb+=s[1]; if(s[0]>s[1]) sa++; else if(s[1]>s[0]) sb++; });
+    A.pl++; B.pl++;
+    A.sw+=sa; A.sl+=sb; B.sw+=sb; B.sl+=sa;
+    A.gw+=ga; A.gl+=gb; B.gw+=gb; B.gl+=ga;
+    if(sa>sb){ A.w++; A.pts+=2; } else if(sb>sa){ B.w++; B.pts+=2; }
+  });
+  return Object.keys(t).map(function(k){ return t[k]; }).sort(function(x,y){
+    return y.pts-x.pts || (y.sw-y.sl)-(x.sw-x.sl) || (y.gw-y.gl)-(x.gw-x.gl) || x.id-y.id;
+  });
+}
+
+function renderStandings(){
+  var rows = table(), played = rows.some(function(r){ return r.pl>0; });
+  document.getElementById("standings").innerHTML = rows.map(function(r,i){
+    return '<tr class="'+(r.id===mine?"mine":"")+'">'+
+      '<td class="rank">'+(played?(i+1)+".":"–")+'</td>'+
+      '<td><b>'+esc(PM[r.id].names)+'</b></td>'+
+      '<td>'+r.pl+'</td><td>'+r.w+'</td>'+
+      '<td>'+r.sw+":"+r.sl+'</td><td>'+r.gw+":"+r.gl+'</td>'+
+      '<td class="pts">'+r.pts+'</td></tr>';
+  }).join("");
+  document.getElementById("standingsNote").textContent = played
+    ? "Ljestvica se računa iz rezultata upisanih u tablicu lige."
+    : "Još nema upisanih rezultata. Ljestvica se popunjava čim prvi rezultat uđe u tablicu.";
+}
+
+/* ---------- raspored ---------- */
+function renderSchedule(){
+  var only = document.getElementById("onlyMine").checked && mine;
+  var list = MATCHES.filter(function(m){ return !only || m.a===mine || m.b===mine; });
+  var box = document.getElementById("schedule");
+  if(!list.length){ box.innerHTML = '<p class="empty">Nema mečeva za prikaz.</p>'; return; }
+  var out = "", week = null, now = today(), open = false;
+  list.forEach(function(m){
+    if(m.week !== week){
+      if(open) out += '</div>';
+      week = m.week; open = true;
+      out += '<div class="week"><div class="week-head">Tjedan '+week+'</div>';
+    }
+    var dt = d(m.date), isMine = mine && (m.a===mine || m.b===mine);
+    var sub = [];
+    if(m.date !== m.orig) sub.push("izvorni termin "+d(m.orig).getDate()+"."+(d(m.orig).getMonth()+1)+".");
+    if(m.note) sub.push(m.note);
+    out += '<div class="match'+(isMine?" mine":"")+(m.sets.length||m.date<now?" done":"")+'">'+
+      '<div class="date"><b>'+String(dt.getDate()).padStart(2,"0")+"."+String(dt.getMonth()+1).padStart(2,"0")+'.</b><i>'+DAYS[dt.getDay()]+'</i></div>'+
+      '<div><div class="vs">'+esc(m.na)+' <em>vs</em> '+esc(m.nb)+'</div>'+
+      (sub.length ? '<div class="names">'+esc(sub.join(" · "))+'</div>' : "")+'</div>'+
+      (m.sets.length
+        ? '<div class="score">'+m.sets.map(function(s){ return s[0]+":"+s[1]; }).join("  ")+'</div>'
+        : '<div class="time">'+esc(m.time)+'</div>')+
+      '</div>';
+  });
+  box.innerHTML = out + (open ? '</div>' : "");
+}
+
+/* ---------- sljedeći meč ---------- */
+function renderHero(){
+  var now = today();
+  var pool = MATCHES.filter(function(m){ return !m.sets.length && m.date >= now; });
+  var pick = mine ? pool.filter(function(m){ return m.a===mine||m.b===mine; })[0] : pool[0];
+  var el = document.getElementById("hero");
+  if(!pick){
+    el.innerHTML = '<div class="label">'+(mine?esc(PM[mine]?PM[mine].names:""):"Liga 2026")+'</div>'+
+      '<div class="teams">Nema mečeva na rasporedu</div>'+
+      '<div class="players">Svi termini su odigrani ili još nisu upisani u tablicu.</div>';
+    return;
+  }
+  var dt = d(pick.date), diff = Math.round((dt - d(now))/86400000);
+  var when = diff===0 ? "danas" : diff===1 ? "sutra"
+    : DAYS_LONG[dt.getDay()]+", "+String(dt.getDate()).padStart(2,"0")+"."+String(dt.getMonth()+1).padStart(2,"0")+".";
+  el.innerHTML =
+    '<div class="label">'+(mine ? "Tvoj sljedeći meč" : "Sljedeći meč u ligi")+'</div>'+
+    '<div class="teams">'+esc(pick.na)+' vs '+esc(pick.nb)+'</div>'+
+    '<div class="when"><span class="pill">'+when+" u "+esc(pick.time)+'</span>'+
+    (mine ? "" : '<span class="pill ghost">Odaberi svoju ekipu za osobni raspored</span>')+'</div>';
+}
+
+/* ---------- ekipe ---------- */
+function renderPairs(){
+  document.getElementById("pairs").innerHTML = PAIRS.map(function(p){
+    return '<div class="pair'+(p.id===mine?" mine":"")+'"><span>'+esc(p.names)+'</span></div>';
+  }).join("");
+}
+
+/* ---------- izbornik ekipe ---------- */
+function renderSelect(){
+  var sel = document.getElementById("pairSel");
+  sel.innerHTML = '<option value="0">Nisam odabrao/la ekipu</option>' + PAIRS.map(function(p){
+    return '<option value="'+p.id+'">'+esc(p.names)+'</option>';
+  }).join("");
+  if(!PM[mine]) mine = 0;
+  sel.value = String(mine);
+}
+
+function status(text, warn){
+  var el = document.getElementById("dataStatus");
+  el.textContent = text;
+  el.className = "datastatus" + (warn ? " warn" : "");
+}
+
+function renderAll(){ renderSelect(); renderHero(); renderSchedule(); renderStandings(); renderPairs(); }
+
+/* ---------- start ---------- */
+setData(buildMatches(document.getElementById("fallbackCsv").textContent));
+renderAll();
+status("Učitavam najnovije podatke iz tablice lige…");
+
+fetch(CSV_URL, {cache:"no-store"})
+  .then(function(r){ if(!r.ok) throw new Error(r.status); return r.text(); })
+  .then(function(text){
+    setData(buildMatches(text));
+    renderAll();
+    var t = new Date();
+    status("Podaci iz tablice lige · osvježeno u "+String(t.getHours()).padStart(2,"0")+":"+String(t.getMinutes()).padStart(2,"0"));
+  })
+  .catch(function(){
+    status("Tablica lige trenutno nije dostupna — prikazana je zadnja poznata verzija rasporeda.", true);
+  });
+
+document.getElementById("pairSel").addEventListener("change", function(){
+  mine = parseInt(this.value,10) || 0;
+  try{ mine ? localStorage.setItem(KEY,String(mine)) : localStorage.removeItem(KEY); }catch(e){}
+  renderHero(); renderSchedule(); renderStandings(); renderPairs();
+});
+document.getElementById("onlyMine").addEventListener("change", renderSchedule);
+})();
+</script>
+
+</body>
+</html>
